@@ -1,0 +1,392 @@
+#signup {
+    clear: both;
+    width: 80%; /* 1000px / 1250px */
+    font-size: 0.6125em; /* 13 / 16 */
+    max-width: 92.3em; /* 1200px / 13 */
+    margin: 0 auto;
+    padding: 30px 0px 10px 0px;
+    position: relative;
+    color: #000;
+}
+
+#login, #signup {
+    clear: both;
+    width: 80%; /* 1000px / 1250px */
+    font-size: 0.6125em; /* 13 / 16 */
+    max-width: 92.3em; /* 1200px / 13 */
+    margin: 0 auto;
+    padding: 50px 0px 10px 0px;
+    position: relative;
+    color: #000;
+}
+
+.invalidLogin {
+    background-color: #FF9999;
+    border: 2px dotted red;
+    top: 10%;
+    clear: both;
+    width: 55%; /* 1000px / 1250px */
+    max-width: 92.3em; /* 1200px / 13 */
+    margin: 0 auto;
+    position: absolute;
+    color: #000;
+}
+
+.fb-login-button.fb_iframe_widget {
+    margin-top: 30px;
+}
+
+.right_align{
+    text-align:right;
+    }
+
+.left_align{
+    text-align:left;
+    padding-left:3%;
+}
+
+.red {
+    color: red;
+}
+
+.header {
+    padding-top:1%;
+    width:100%;
+    height: 30px;
+    background: #222 url(/images/footerback.png) left top;
+    text-align: right;
+    color: #ccc;
+}
+
+input[type=text], input[type=password] {
+    border: 5px solid white; 
+    width: 50%;
+    font-size: 2em;
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 8px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+
+/*Buttons*/
+.mybutton {
+    
+/*    -moz-box-shadow: 0px 10px 14px -7px #3e7327;
+*//*    -webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+*/    margin: 0 auto;
+/*    box-shadow: 0px 10px 14px -7px #3e7327;
+*/    
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+    background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+    background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+    background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+    background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+    background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+    
+    background-color:#77b55a;
+    
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    
+    border:1px solid #4b8f29;
+    
+    display:inline-block;
+    color:#ffffff;
+    font-family: Courier New;
+    font-size:18px;
+    font-weight:bold;
+    padding:4px 9px;
+    text-decoration:none;
+    
+    text-shadow:0px 1px 0px #5b8a3c;
+    
+}
+.mybutton:hover {
+    
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #72b352), color-stop(1, #77b55a));
+    background:-moz-linear-gradient(top, #72b352 5%, #77b55a 100%);
+    background:-webkit-linear-gradient(top, #72b352 5%, #77b55a 100%);
+    background:-o-linear-gradient(top, #72b352 5%, #77b55a 100%);
+    background:-ms-linear-gradient(top, #72b352 5%, #77b55a 100%);
+    background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
+    
+    background-color:#72b352;
+}
+.mybutton:active {
+    position:relative;
+    top:1px;
+}
+a.mybutton:visited{
+    color:black;
+}
+
+#rating_rating {
+    height: 40px;
+    width: 45%;
+    /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(left, #E31507 0%, #086901 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(left, #E31507 0%, #086901 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(left, #E31507 0%, #086901 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #E31507), color-stop(1, #086901));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(left, #E31507 0%, #086901 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to right, #E31507 0%, #086901 100%);
+}
+
+.rateButton {
+    padding: 0px;
+    -moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
+    box-shadow:inset 0px 1px 0px 0px #f5978e;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f) );
+    background:-moz-linear-gradient( center top, #f24537 5%, #c62d1f 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f');
+    background-color:#f24537;
+    -webkit-border-top-left-radius:15px;
+    -moz-border-radius-topleft:15px;
+    border-top-left-radius:15px;
+    -webkit-border-top-right-radius:15px;
+    -moz-border-radius-topright:15px;
+    border-top-right-radius:15px;
+    -webkit-border-bottom-right-radius:15px;
+    -moz-border-radius-bottomright:15px;
+    border-bottom-right-radius:15px;
+    -webkit-border-bottom-left-radius:15px;
+    -moz-border-radius-bottomleft:15px;
+    border-bottom-left-radius:15px;
+    text-indent:0px;
+    border:1px solid #d02718;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:18px;
+    font-weight:bold;
+    font-style:normal;
+    height:50px;
+    line-height:50px;
+    width:131px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #810e05;
+}
+.rateButton:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537) );
+    background:-moz-linear-gradient( center top, #c62d1f 5%, #f24537 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537');
+    background-color:#c62d1f;
+}.rateButton:active {
+    position:relative;
+    top:1px;
+}
+
+#submit {
+    width: 50%;
+}
+
+/* Inner content */
+.main_content {
+    background-color: white;
+}
+
+ul.top_nav li {
+    float:right;
+    list-style-type: none;
+    padding-right: 2%;
+    height: 22px;
+}
+
+ul.top_nav li a {
+    height: 22px;
+}
+
+.left_nav {
+    background-color: white;
+}
+
+.left_nav_item h2 {
+    background-color: #92c978;
+    border: 2px dotted black;
+    padding: 20px;
+    color: white;
+    text-align: right;
+}
+
+.left_nav_item {
+    width: 70%;
+    float:right;
+    padding-right: 5%;
+}
+
+.left_nav_item h2:hover {
+    background-color: #4aa61f;
+}
+
+.get_points {
+    position: relative;
+    padding: 5%;
+    text-align: left;
+    background-color:white;
+    width: 100%;
+}
+
+.get_points input[type=text] {
+    color: gray;
+    font-size: 16px;
+    font-style: italic;
+    padding-right: 0px;
+}
+
+.my_activities {
+    position: relative;
+    padding: 15px;
+    text-align: left;
+    background-color:white;
+    width: 100%;
+}
+
+.rate_activities {
+    position: relative;
+    padding: 15px;
+    text-align: left;
+    background-color:white;
+    width: 100%;
+}
+
+.right_content {
+    background-color: white;
+    text-align: left;
+}
+
+.activity_content {
+    float:left;
+    width: 50%;
+}
+
+.activity_points {
+    float:right;
+    font-style: italic;
+}
+
+.pending {
+    font-style: italic;
+}
+
+.activity_to_rate {
+    padding: 10px;
+    color:black;
+    display: block;
+    padding-bottom: 1%;
+    background-color: lightgray;
+    margin-left: 20px;
+    border: 2px dotted gray;
+    width: 60%;
+    overflow: auto;
+}
+
+
+.activity_item {
+    padding: 10px;
+    color:black;
+    display: block;
+    padding-bottom: 1%;
+    background-color: lightgray;
+    margin-left: 20px;
+    border: 2px dotted gray;
+    width: 80%;
+    overflow: auto;
+}
+
+li.activity_item {
+    list-style: none;
+}
+
+.activity .content {
+    width: 30%;
+}
+
+.empty {
+    padding: 10px;
+    margin: 20px;
+    border: 1px dotted gray;
+    width: 80%;
+    background-color: rosybrown;
+
+}
+
+.timestamp {
+    color: gray;
+    font-size: 12px;
+}
+
+.delete {
+    padding-left: 10px;
+    font-size: 80%;
+    color: #C0C0C0;
+    float: right;
+}
+
+.bold {
+    font-weight: bolder;
+    color:#163109;
+}
+
+.rating_form {
+    margin: 10px;
+    padding: 10px;
+}
+
+.alert-success {
+    background-color: #73fb76;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

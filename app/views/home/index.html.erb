@@ -1,0 +1,67 @@
+<% provide(:title, 'ManPts.com') %>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=281209268578373";
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="skiptomain"><a href="#maincontent">skip to main content</a></div>
+
+<div id="wrapper">
+    <div id="toptitle">
+        <%= image_tag('lightLogo.png') %>
+    </div>
+    <div id="headcontainer">
+        <div class="section group">
+            <%= render 'shared/left_title' %>
+            <div class="col span_3_of_6">
+                <header id="right_side_header">
+                    <h3 class="left_align">Submit your own Activities to get ManPts.</h3>
+                    <h3 class="left_align">Give others ManPts by rating their Activities.</h3>
+                    <h3 class="left_align">Get real rewards for your manliness.</h3>
+                </header>
+                
+                <p class="left_align">Ready to get started?</p>
+                <p class="left_align">
+              <% if user_signed_in? %>
+                    Signed in as <%= current_user.email %> 
+                    <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => "mybutton" %></br>
+              <% end %>
+              <%= link_to "Sign up", new_user_registration_path, :class => "mybutton" %> 
+              <%= link_to "Login", new_user_session_path, :class => "mybutton" %>
+                    <!-- <a href="login.php" class="mybutton">Log in</a></p> -->
+                    <!--  <div class="left_align fb-login-button" autologoutlink="true" data-show-faces="true" data-width="200" data-max-rows="1"></div> -->
+                </div>
+            </div>
+        </div>
+        <div id="maincontentcontainer">
+            <div id="maincontent">
+            </div>
+        </div>
+        <%= render 'shared/footer' %>
+    </div>
+
+
+
+    <!-- JavaScript at the bottom for fast page loading -->
+
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <script src="js/selectivizr-min.js"></script>
+    <![endif]-->
+
+
+    <!-- More Scripts-->
+    <script src="js/responsivegridsystem.js"></script>
+    <script language="javascript"> 
+    function showForm() {
+        var ele = document.getElementById("signup_form");
+            ele.style.display = "block";
+        } 
+    </script>
