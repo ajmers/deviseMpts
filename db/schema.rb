@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140308202524) do
+ActiveRecord::Schema.define(version: 20140310052351) do
+
+  create_table "activities", force: true do |t|
+    t.text     "content"
+    t.integer  "num_times_ranked"
+    t.decimal  "avg_score"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -26,6 +35,8 @@ ActiveRecord::Schema.define(version: 20140308202524) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "points_won"
+    t.decimal  "partic_points"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

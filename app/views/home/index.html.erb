@@ -8,9 +8,13 @@
       fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
-<div id="skiptomain"><a href="#maincontent">skip to main content</a></div>
-
 <div id="wrapper">
+    <% if user_signed_in? %>
+        <div id = "signedIn"> Signed in as <%= current_user.email %> 
+            <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => "mybutton" %>
+        </div>
+        <% end %>
+
     <div id="toptitle">
         <%= image_tag('lightLogo.png') %>
     </div>
@@ -26,13 +30,8 @@
                 
                 <p class="left_align">Ready to get started?</p>
                 <p class="left_align">
-              <% if user_signed_in? %>
-                    Signed in as <%= current_user.email %> 
-                    <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => "mybutton" %></br>
-              <% end %>
               <%= link_to "Sign up", new_user_registration_path, :class => "mybutton" %> 
               <%= link_to "Login", new_user_session_path, :class => "mybutton" %>
-                    <!-- <a href="login.php" class="mybutton">Log in</a></p> -->
                     <!--  <div class="left_align fb-login-button" autologoutlink="true" data-show-faces="true" data-width="200" data-max-rows="1"></div> -->
                 </div>
             </div>

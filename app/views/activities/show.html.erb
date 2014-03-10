@@ -1,0 +1,16 @@
+<% provide(:title, 'Welcome') %>
+<div class="header"> 
+	<%= render 'shared/top_nav' %>
+</div>
+
+<div class = "main_content">
+	<%= render 'shared/left_nav' %>
+	<div class="col span_4_of_6 right_content">
+		<div class="my_activities">
+			<h3> My New Activity </h3>
+				<%= render @activity %>
+		</div>
+	</div>
+</div>
+<!-- 
+<%= render 'shared/footer' %> -->

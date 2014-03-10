@@ -33,6 +33,7 @@ group :doc do
 end
 
 gem 'devise', '3.2.3'
+gem "will_paginate"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
