@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140310052351) do
+ActiveRecord::Schema.define(version: 20140311043906) do
 
   create_table "activities", force: true do |t|
     t.text     "content"
     t.integer  "num_times_ranked"
     t.decimal  "avg_score"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ratings", force: true do |t|
+    t.integer  "activity_id"
+    t.integer  "rater_id"
+    t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
