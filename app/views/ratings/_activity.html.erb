@@ -1,0 +1,23 @@
+	<div class="activity_to_rate">
+		<div class="activity_content">
+		<span class="content"><%= activity.content %></span>
+		<span class="timestamp"><%= time_ago_in_words(activity.created_at) %> ago</span>
+		</div>
+	</div>
+	<div class = "rating_form" >
+		<% unless activity.user_id === @user.id %>
+       		<%= form_for ([activity, @rating]) do |f| %>
+            <%= f.hidden_field :rater_id, :value => current_user.id %>
+            <div id="slider_container">
+                <span class = "slider-label left"> <p> Dock points</p></span>
+                <span class = "slider-label right"><p> Give points</p> </span>
+                <div id="slider">
+                    <%= f.range_field :rating, :in => -10..10, class: "bar", id: "rangeinput", onchange: "rangevalue.value=value"%>
+                    <span class="highlight"></span>
+                    <output id="rangevalue">0</output>
+                </div>
+            </div>
+			<%= f.submit "Rate!", class: "rateButton" %>
+			<% end %>
+		<% end %>
+	</div>

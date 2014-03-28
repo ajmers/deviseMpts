@@ -490,6 +490,7 @@ background-color : #ccc; }
 	}
 
 	#minifootercontainer {
+        z-index: 1;
 		color: white;
 		position: fixed;
 		bottom: 0px;
