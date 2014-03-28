@@ -34,6 +34,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'pg'
+
 gem 'devise', '3.2.3'
 gem "will_paginate"
 
